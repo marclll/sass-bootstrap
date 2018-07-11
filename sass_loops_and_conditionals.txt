@@ -1,0 +1,28 @@
+Conditional flows and loops are important and practical when developing mixins and modular functionality within your Sass projects. Let's see an example:
+
+//html_part
+
+<ul class="social-links">
+  <li><a href="http://www.facebook.com/user/">Facebook</a></li>
+  <li><a href="http://www.twitter.com/user/">Twitter</a></li>
+  <li><a href="http://www.linkedin.com/user/">LinkedIn</a></li>
+  <li><a href="http://plus.google.com/user/">Google+</a></li>
+</ul>
+
+
+//sass_part
+
+$social-links: "facebook", "linkedin", "twitter", "google";
+
+%icon-settings {
+  padding-left: 20px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+@each $link in $social-links {
+  a[href*="#{$link}"] {
+    @extend %icon-settings;
+    background-image: url(/images/social/#{$link}.png);
+  }
+}

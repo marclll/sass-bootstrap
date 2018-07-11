@@ -1,0 +1,42 @@
+#container, main, article, section {
+  height: 50%;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+#cap_estreta, #cap_estreta #logo, #cap_estreta #foto-raco {
+  height: 55px; }
+
+td, th, h2 {
+  font-size: 10pt; }
+
+h1 {
+  color: #D61831; }
+
+h2 {
+  text-align: left; }
+
+#foto-alumne {
+  display: block; }
+
+#foto-alumne img {
+  height: 100px; }
+
+#menu h2 {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 4px;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 20px; }
+
+#cap_estreta {
+  background-color: #BEB295; }
+
+#cap_estreta #foto-raco {
+  background-image: url("../imatges/salaOrdinadors.jpg");
+  background-repeat: no-repeat;
+  background-position: 200px top;
+  width: 1300px; }

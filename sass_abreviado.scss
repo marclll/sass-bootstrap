@@ -1,0 +1,107 @@
+// Abbreviations
+
+%containers{
+	height: 50%;
+  	width: 100%;
+ 	margin: 0;
+  	padding: 0;
+}
+
+%h55{
+	height: 55px;
+}
+
+%f10{
+	font-size: 10pt;
+}
+
+%b{
+  	font-weight: bold;
+}
+
+@mixin col_back($col,$back){
+	color: $col;
+	background-color: $back;
+}
+
+@mixin padd($gen:null,$top:null,$right:null,$bottom:null,$left:null){
+	padding:$gen;
+	padding-top: $top;
+	padding-right: $right;
+	padding-bottom: $bottom;
+	padding-left: $left;
+}
+
+@mixin marg($gen:null,$top:null,$right:null,$bottom:null,$left:null){
+	margin:$gen;
+	margin-top: $top;
+	margin-right: $right;
+	margin-bottom: $bottom;
+	margin-left: $left;
+}
+
+@mixin bord($gen:null,$top:null,$right:null,$bottom:null,$left:null,$space:null,$collap:null){
+	border:$gen;
+	border-top: $top;
+	border-right: $right;
+	border-bottom: $bottom;
+	border-left: $left;
+	border-spacing: $space;
+	border-colapse: $collap;
+}
+
+@mixin back($dir,$pos,$col:null){
+	background-image: url("../imatges/"+$dir);
+ 	background-repeat: no-repeat;
+ 	background-position:$pos;
+ 	background-color:$col;
+}
+
+
+//Code
+
+
+#container,main,article,section{
+	@extend %containers;
+}
+
+td, th {
+  	@extend %f10;
+}
+
+h1 {
+  	color: #D61831;
+}
+
+h2 {
+	@extend %f10;
+	text-align:left;
+}
+
+#foto-alumne {
+  display:block;
+}
+
+#foto-alumne img{
+  height: 100px;
+}
+
+#menu h2 {
+  @include marg($top:0,$right:0,$bottom:0,$left:4px);
+  @include padd($top:0,$right:0,$bottom:0,$left:20px); 
+}
+
+#cap_estreta {
+  background-color: #BEB295;
+  @extend %h55;
+}
+
+#cap_estreta #logo {
+  @extend %h55;
+}
+
+#cap_estreta #foto-raco {
+  @include back($dir:"salaOrdinadors.jpg",$pos:(200px top));
+  @extend %h55;
+  width:1300px;
+}

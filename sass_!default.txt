@@ -1,0 +1,6 @@
+@import "color";
+
+body{
+	$color: blue !default;
+	background-color: $color;
+}

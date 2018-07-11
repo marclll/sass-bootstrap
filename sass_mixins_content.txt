@@ -1,0 +1,16 @@
+The @content directive allows you to pass a block of styles not defined in the mixin. These styles will appear within the mixin where you place @content.
+
+Example:
+
+@mixin cont {
+  background-color: black;
+  color: white;
+  @content;
+}
+
+div {
+  @include cont {
+    font-size: 12px;
+    font-style: italic;
+  }
+}

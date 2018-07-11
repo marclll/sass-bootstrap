@@ -1,0 +1,1 @@
+Yes, because they allow you to simplify your code setting values to keywords
