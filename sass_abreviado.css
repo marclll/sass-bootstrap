@@ -40,3 +40,10 @@ h2 {
   background-repeat: no-repeat;
   background-position: 200px top;
   width: 1300px; }
+
+#logout {
+  float: right;
+  width: 12em;
+  height: 100%;
+  margin: 0px;
+  padding: 0px; }

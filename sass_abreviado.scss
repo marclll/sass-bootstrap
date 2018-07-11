@@ -105,3 +105,11 @@ h2 {
   @extend %h55;
   width:1300px;
 }
+
+#logout {
+  float:right;  
+  width:12em;
+  height:100%;
+  @include marg($gen:0px);
+  @include padd($gen:0px);
+}
