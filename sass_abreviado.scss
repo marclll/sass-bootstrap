@@ -40,14 +40,14 @@
 	margin-left: $left;
 }
 
-@mixin bord($gen:null,$top:null,$right:null,$bottom:null,$left:null,$space:null,$collap:null){
+@mixin bord($gen:null,$top:null,$right:null,$bottom:null,$left:null,$space:null,$collapse:null){
 	border:$gen;
 	border-top: $top;
 	border-right: $right;
 	border-bottom: $bottom;
 	border-left: $left;
 	border-spacing: $space;
-	border-colapse: $collap;
+	border-colapse: $collapse;
 }
 
 @mixin back($dir,$pos,$col:null){
@@ -101,15 +101,177 @@ h2 {
 }
 
 #cap_estreta #foto-raco {
-  @include back($dir:"salaOrdinadors.jpg",$pos:(200px top));
   @extend %h55;
   width:1300px;
+  @include back($dir:"salaOrdinadors.jpg",$pos:(200px top));
 }
 
 #logout {
   float:right;  
   width:12em;
   height:100%;
-  @include marg($gen:0px);
-  @include padd($gen:0px);
+  @include marg($gen:0);
+  @include padd($gen:0);
+}
+
+#info-alumne {
+  @include padd($gen:1em,$top:0);
+  @include marg($bottom:1em);
+  @include back($dir:"Cantonada_grisa_esquerra.gif",$pos:(bottom left),$col:#BEB295);
+}
+
+h4 {
+  color:#297DB5;
+  @include marg($gen:0);
+}
+
+.dadaAlumne{
+  @include marg($top:1em);
+  @extend %b;
+}
+
+#contingut{
+  top:0;
+  left:0;
+}
+
+#contingutsensedreta {
+  position:relative;
+  @include marg($gen:0,$left:16em,$right:1em);
+  @include padd($gen:0,$bottom:1em);
+  @extend %f10;
+}
+
+#contingutsensedreta  ul,#cosAvis  ul {
+  @include marg($gen:0);
+  @include padd($gen:0,$left:20px,$top:0.2em,$bottom:0.2em);
+  list-style-image: url("../imatges/Botonet_llistats.gif");
+}
+    
+ #dreta  li{
+  list-style-type:none;
+  list-style-position:outside;
+  @include marg($gen:0);
+  @include padd($gen:0,$top:.2em,$bottom:.2em);
+}
+
+.texto_agenda {
+  color:#297DB5;
+}
+
+.texto_agenda2 {
+  @extend %b;
+  color:#BEB295;
+}
+
+.calendariMes td{
+  @include padd($gen:2px);
+  width:2em;
+  text-align:center;
+  background-color: #EEEDEA;
+  font-size:80%;
+  @extend %b;
+}  
+ 
+.calendariMes td.calendariNomMes {
+  @include padd($left:.5em);
+  @include col_back($col:white,$back:#C0DAE9);
+  width:auto;
+  text-transform: lowercase;
+  text-align:left;
+  font-size:100%;
+}
+
+.calendariMes td.calendariDiaSetmana {
+  @include col_back($col:#297DB5,$back:#D0D1CC);
+  font-weight:normal;
+}
+
+.calendariMes td.diaAnterior ,.calendariMes td.diaFutur  {
+  @include col_back($col:#808080,$back:#EEEDEA);
+}
+
+.calendariMes td.festa {
+  @include col_back($col:#D61831,$back:#EEEDEA);
+}
+
+.calendariMes td.event {
+  @include col_back($col:white,$back:#297DB5);
+}
+.calendariMes td.avui {
+  background-color: #FED45E;
+}
+
+.event {
+  background-image:none;
+}
+
+#caixetes {
+ width: 33%;
+}
+
+#caixetes{
+ width: 25%;
+}
+
+.llista_noticies {
+	@include padd($top:1em);
+}
+
+.llista_avisos {
+	@include padd($top:1em);
+} 
+ 
+.text_noticia {
+  @include back($dir:"Bola_vermella.gif",$pos:(0px 0px),$col:#BEB295);
+  @include padd($left:20px);
+  color: #808080;
+  @extend %b;
+}
+
+.postit {
+  @include padd($left:20px);
+}
+
+.postit_grup {
+  @include padd($top:1em);
+}
+
+.noticia_assig {
+	@include padd($bottom:1em);
+}
+
+.noticia_assig h2{
+  @include padd($gen:0em,$left:20px);
+}
+
+/* Avis per espai (postit) */
+.marc_postit {
+  @include back($dir:"Cantonada_blanca_fons_gris.gif",$pos:(bottom right),$col:white);
+  @include padd($gen:1em,$bottom:20px);
+}
+
+#cosAvis {
+  background-color:white;
+  @include marg($gen:0);
+  @include padd($gen:1em);
+}
+
+.horaris table{
+  @include bord($space:0,$collapse:collapse);
+  width: 99%;
+}
+.horaris td {
+  background-color: transparent;
+  @include bord($gen:(1px solid #297DB5),$left:0,$top:0);
+}
+.horaris .notaAssig{
+  @include bord($gen:0);
+}
+
+.horaris th{
+  @include col_back($col:#297DB5,$back:#D5E6F0);
+  @extend %b;
+  text-align: center;
+  vertical-align: middle;
 }

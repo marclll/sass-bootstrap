@@ -1,6 +1,62 @@
+#container{
+  height: 50%;
+  weight: 100%;
+  margin: 0;
+  paddin: 0;
+}
+
+td, th {
+  font-size: 10pt;
+}
+
+h1 {
+  color: #D61831;
+  }
+
+h2 {
+  font-size: 10pt;
+  text-align:left;
+}
+
+#foto-alumne {
+  display:block;
+}
+#foto-alumne img{
+  height: 100px;
+}
+
+#menu h2 {
+margin:0pt 0pt 0pt 4px;
+padding:0pt 0pt 0em 20px; 
+}
+
+/* raco */
+
+#cap_estreta {
+  background-color: #BEB295;
+  height: 55px;
+}
 
 
+#cap_estreta #logo {
+  height: 55px;
+}
 
+#cap_estreta #foto-raco {
+  background-image: url("../imatges/salaOrdinadors.jpg");
+  background-repeat: no-repeat;
+  background-position: 200px top;
+  height:55px;
+  width:1300px;
+}
+/* barra:logout */
+#logout {
+  float:right;  
+  width:12em;
+  margin:0px;
+  padding:0px;
+  height:100%;
+}
 
 #info-alumne {
   background-color:#BEB295;
@@ -70,6 +126,12 @@ h4 {
  * Calendari *
  *************/
 
+main{
+  height: 50%;
+  weight: 100%;
+  margin: 0;
+  paddin: 0;
+}
 
 .calendariMes td{
   width:2em;
@@ -136,6 +198,12 @@ h4 {
  * NOTICIES *
  ************/
 
+article{
+  height: 50%;
+  weight: 100%;
+  margin: 0;
+  paddin: 0;
+}
  
 .llista_noticies {padding-top:1em;}
 
@@ -187,6 +255,13 @@ h4 {
 /***********
  * HORARIS *
  ***********/
+
+section{
+  height: 50%;
+  weight: 100%;
+  margin: 0;
+  paddin: 0;
+}
 
 .horaris table{
   border-spacing: 0px;
